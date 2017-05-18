@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGame.Plugins", "CoinGame.Plugins.csproj", "{2F1CF0CE-56EB-0BFE-53DA-72BC3DC4EE37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGame", "CoinGame.csproj", "{99B9D90B-9A47-DC09-40EB-F5966DC36F60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGame.Editor.Plugins", "CoinGame.Editor.Plugins.csproj", "{5A4F7421-1F81-E37B-58B3-3B1685841737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinGame.Editor", "CoinGame.Editor.csproj", "{AAC24742-EAD3-FECF-D1CF-8D2801EC022D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F1CF0CE-56EB-0BFE-53DA-72BC3DC4EE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1CF0CE-56EB-0BFE-53DA-72BC3DC4EE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1CF0CE-56EB-0BFE-53DA-72BC3DC4EE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1CF0CE-56EB-0BFE-53DA-72BC3DC4EE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B9D90B-9A47-DC09-40EB-F5966DC36F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B9D90B-9A47-DC09-40EB-F5966DC36F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B9D90B-9A47-DC09-40EB-F5966DC36F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B9D90B-9A47-DC09-40EB-F5966DC36F60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4F7421-1F81-E37B-58B3-3B1685841737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4F7421-1F81-E37B-58B3-3B1685841737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4F7421-1F81-E37B-58B3-3B1685841737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4F7421-1F81-E37B-58B3-3B1685841737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC24742-EAD3-FECF-D1CF-8D2801EC022D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC24742-EAD3-FECF-D1CF-8D2801EC022D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC24742-EAD3-FECF-D1CF-8D2801EC022D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC24742-EAD3-FECF-D1CF-8D2801EC022D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
