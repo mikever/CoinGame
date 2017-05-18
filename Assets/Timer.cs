@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
     // Maximum time to complete level (in seconds)
-    public float MaxTime = 60f;
+    public float MaxTime = 300f;
 
     //Countdown
     [SerializeField]
@@ -24,7 +24,6 @@ public class Timer : MonoBehaviour {
         if (CountDown <= 0)
         {
             // Reset coin count
-            Coin.CoinCount = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 	}
