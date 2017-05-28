@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
     // Maximum time to complete level (in seconds)
-    public float MaxTime = 300f;
+    public float MaxTime = 90f;
 
     //Countdown
     [SerializeField]

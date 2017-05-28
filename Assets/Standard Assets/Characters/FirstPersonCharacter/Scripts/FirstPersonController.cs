@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -42,6 +43,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        // Coin counter
+        public Text countText;
+        private int count = 9;
+
+        // Timer
+        public Text timerText;
+        [SerializeField]
+        private float MaxTime = 90f;
+
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +65,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            setCountText();
+            setTimerText();
         }
 
 
@@ -81,6 +93,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            setCountText();
+
+            setTimerText();
+
+            if (count > 0)
+            {
+                MaxTime -= Time.deltaTime;
+            }
         }
 
 
@@ -254,6 +275,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Coin"))
+            {
+                count--;
+            }
+        }
+
+        void setCountText()
+        {
+            countText.text = "Coins: " + count.ToString();
+        }
+
+        void setTimerText()
+        {
+            timerText.text = MaxTime.ToString();
         }
     }
 }
