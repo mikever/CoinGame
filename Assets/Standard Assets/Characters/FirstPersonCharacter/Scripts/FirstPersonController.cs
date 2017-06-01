@@ -46,6 +46,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Coin counter
         public Text countText;
 
+        // Game finished text
+        public Text gameFinishText;
+
         // Timer
         public Text timerText;
 
@@ -67,6 +70,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
             setCountText();
             setTimerText();
+            setFinishText();
         }
 
 
@@ -97,6 +101,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             setCountText();
 
             setTimerText();
+
+            setFinishText();
         }
 
 
@@ -288,6 +294,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         void setTimerText()
         {
             timerText.text = Timer.CountDown.ToString();
+        }
+
+        void setFinishText ()
+        {
+            if (Timer.score == 135)
+            {
+                gameFinishText.text = "You Won!";
+            } else
+            {
+                gameFinishText.text = "";
+            }
         }
     }
 }

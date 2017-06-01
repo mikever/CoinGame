@@ -27,8 +27,6 @@ public class Coin : MonoBehaviour {
     //Called when object destroyed
     void OnDestroy()
     {
-        //Decrement coin count
-        --Coin.CoinCount;
 
         //Check remaining coins
         if (Coin.CoinCount <= 0)
