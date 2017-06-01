@@ -45,12 +45,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         // Coin counter
         public Text countText;
-        private int count = 9;
 
         // Timer
         public Text timerText;
-        [SerializeField]
-        private float MaxTime = 90f;
+
+        // Score
+        
 
         // Use this for initialization
         private void Start()
@@ -97,11 +97,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             setCountText();
 
             setTimerText();
-
-            if (count > 0)
-            {
-                MaxTime -= Time.deltaTime;
-            }
         }
 
 
@@ -277,22 +272,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
 
-        private void OnTriggerEnter(Collider other)
+        /*private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Coin"))
             {
                 count--;
             }
-        }
+        }*/
 
         void setCountText()
         {
-            countText.text = "Coins: " + count.ToString();
+            countText.text = "Score: " + Timer.score.ToString() + "/135";
         }
 
         void setTimerText()
         {
-            timerText.text = MaxTime.ToString();
+            timerText.text = Timer.CountDown.ToString();
         }
     }
 }

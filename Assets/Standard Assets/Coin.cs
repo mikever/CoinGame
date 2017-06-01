@@ -16,7 +16,12 @@ public class Coin : MonoBehaviour {
     {
         //If player collected coin, then destroy object
         if (Col.CompareTag("Player"))
+        {
+            Timer.CountDown = Timer.CountDown + 5;
             Destroy(gameObject);
+            Timer.score = Timer.score + 5;
+        }
+            
     }
 
     //Called when object destroyed
