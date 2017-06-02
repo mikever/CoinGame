@@ -293,7 +293,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         void setTimerText()
         {
-            timerText.text = Timer.CountDown.ToString();
+            timerText.text = "Time: " + Timer.CountDown.ToString("0");
         }
 
         void setFinishText ()

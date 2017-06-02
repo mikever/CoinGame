@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
     // Maximum time to complete level (in seconds)
-    public static float MaxTime = 1000f;
+    public static float MaxTime = 90f;
 
     //Countdown
     [SerializeField]
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour {
         {
             // Teleport player to victory spot
             GameObject player = GameObject.Find("FPSController");
-            player.transform.position = new Vector3(146, 39, -63);
+            player.transform.position = new Vector3(131, 36.5f, -73);
 
             // Destroy timer and set off fireworks
             GameObject Timer = GameObject.Find("LevelTimer");
